@@ -1,0 +1,618 @@
+/* global style  */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a:link {
+    text-decoration: none;
+
+}
+
+li {
+    list-style: none;
+}
+
+/* End global style*/
+/* Start Navbar*/
+.navbar {
+    background: #7575ff;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar a {
+    color: #444444;
+}
+
+.navbar a:hover {
+    color: #ececec;
+}
+
+.navbar .left {
+    display: flex;
+    align-items: flex-start;
+    font-size: 30px;
+}
+
+.navbar .right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    order: 2;
+    position: relative;
+
+}
+
+.navbar .right ul li {
+    float: right;
+    margin: 15px;
+    margin-bottom: 0px;
+    ;
+}
+
+.navbar .right ul li i {
+    margin: 3px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.navbar .right ul li i:hover {
+    color: #ececec;
+}
+
+.navbar .dropdwon {
+    position: absolute;
+    bottom: -110px;
+    right: 0px;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #ececec;
+    display: none;
+    z-index: 1;
+}
+
+.navbar .dropdwon ul {
+    padding-left: 4px;
+}
+
+.navbar .dropdwon ul li {
+    margin-bottom: 3px;
+    width: 300px;
+    border-bottom: .5px solid #5e5e5e;
+}
+
+.navbar .dropdwon ul li {
+    cursor: pointer;
+}
+
+.navbar .dropdwon ul li a {
+    color: #585858;
+    margin-left: 0px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.navbar .dropdwon ul li:hover,
+.navbar .dropdwon ul li a:hover {
+    background-color: #b4b4f2;
+}
+
+.navbar .dropdwon .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid pink;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+}
+
+.navbar .active {
+    display: flex;
+}
+
+.navbar .humberger {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    display: none;
+}
+
+.navbar .humberger .line {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 5px;
+    margin-top: 6px;
+    ;
+}
+
+@media screen and (max-width:600px) {
+    .navbar .right {
+        position: absolute;
+        top: 65px;
+        right: 0px;
+        height: 400px;
+        margin-top: 10px;
+        background-color: #7575ff;
+        transition: all .5 ease-in-out;
+        display: none;
+        z-index: 1;
+
+    }
+
+    .navbar .right ul {
+        display: flex;
+        flex-flow: column-reverse wrap;
+    }
+
+    .navbar .right ul a li {
+        width: 100%;
+        padding: 3px;
+        margin-bottom: 40px;
+        border-bottom: 2px solid white;
+    }
+
+    .dlink {
+        cursor: pointer;
+        color: #7575ff;
+        font-size: 20px;
+    }
+
+    .navbar .humberger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar .dropdwon {
+        position: absolute;
+        top: 400px;
+    }
+
+    .navbar .open {
+        display: block;
+    }
+
+}
+
+/* End Navbar*/
+
+/* start login*/
+.log,
+.sign {
+    height: 600px;
+    position: relative;
+}
+
+.log .outer,
+.sign .outer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: fit-content;
+    transform: translate(-50%, -50%);
+}
+
+.log .outer h1,
+.sign .outer h1 {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 70px;
+    color: #0000e5;
+}
+
+.log .outer .user label,
+.log .outer .pass label,
+.sign .outer .fields label {
+    margin: 6px;
+    margin-bottom: 0px;
+    display: block;
+    font-size: large;
+    color: #a0a0a0;
+
+}
+
+.log .outer .user input,
+.log .outer .pass input,
+.sign .outer .fields input {
+    width: 300px;
+    margin: 8px;
+    margin-top: 0px;
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid #7f7ff2;
+    outline: none;
+}
+
+.log .outer .other {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.sign .outer .foot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.sign .outer .foot a {
+    color: black;
+}
+
+.sign .outer .fields .coustom-file {
+    display: none;
+}
+
+.sign .outer .fields .file {
+    color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 30px;
+    margin-left: 0px;
+    cursor: pointer;
+    background-color: yellow;
+    padding: 5px;
+
+}
+
+.log .outer .pass i,
+.sign .outer .fields i {
+    font-size: 30px;
+    cursor: pointer;
+
+}
+
+#checkbox {
+    margin: 0px;
+    width: fit-content;
+}
+
+/*End login */
+
+/* start Additem*/
+.add {
+    height: 600px;
+    position: relative;
+}
+
+.add .outer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: fit-content;
+    transform: translate(-50%, -50%);
+}
+
+.add .outer h1 {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 70px;
+    color: #0000e5;
+}
+
+.add .outer div {
+    margin-top: 40px;
+    margin-bottom: 35px;
+    ;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+}
+
+.add .outer div input[type='text'] {
+    border: none;
+    border-bottom: 2px solid #7f7ff2;
+    outline: none;
+}
+
+.add .outer .itemimage label {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: all .2s ease-in;
+
+}
+
+.add .outer .itemimage label:hover {
+    background-color: blue;
+}
+
+.add .outer .itemimage input[type='file'] {
+    display: none;
+}
+
+.add .outer .itemaddbtn {
+    margin-top: 3px;
+    ;
+    float: right;
+    width: fit-content;
+}
+
+.add .outer .itemaddbtn input {
+    width: 200px;
+
+}
+
+/*End Additem */
+
+/* start  categories */
+
+.cat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 30px;
+    background-color: #ececec;
+    height: 100px;
+}
+
+.cat .outer {
+    position: relative;
+    margin-top: 20px;
+
+}
+
+.cat .outer a {
+    color: #a0a0a0;
+    cursor: pointer;
+}
+
+.cat .outer a:hover {
+    color: #7575ff;
+}
+
+.cat .outer .active {
+    color: #7575ff;
+}
+
+
+.items .outer {
+    background-color: #d3d3d3;
+    margin-left: 70px;
+    margin-bottom: 25px;
+    margin-right: 20px;
+    text-align: center;
+    position: relative;
+
+}
+
+.items .outer .price {
+    background-color: #a8a8a8;
+    color: white;
+    position: absolute;
+    left: 0px;
+    border-radius: 10px 17px -1px 6px;
+
+
+}
+
+.items .outer a {
+    color: inherit;
+}
+
+.items .outer a p {
+    margin-top: 20px;
+}
+
+.items .outer a p:hover {
+    color: #7575ff;
+}
+
+.items .outer a .imgecon {
+    margin-top: 30px;
+}
+
+/*End  categories */
+
+/* start item page */
+
+.img-con-item {
+    width: fit-content;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.item-info-page {
+    margin-top: 50px;
+}
+
+.item-info-page .info {
+    background-color: #a0a0a0;
+    height: fit-content;
+    width: 100%;
+
+}
+
+.item-info-page .info:nth-child(even) {
+
+    background-color: #cecece;
+
+}
+
+
+.item-info-page .info p {
+    display: inline-block;
+}
+
+.comments-con {
+
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
+
+}
+
+.usercon {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    margin-right: 30px;
+    align-items: center;
+    height: fit-content;
+    margin-bottom: 40px;
+
+
+}
+
+
+.usercon span {
+    display: block;
+}
+
+.usercon img {
+    width: 70px;
+}
+
+#commenttext {
+    width: 300px;
+    height: 300px;
+}
+
+#sendcomm {
+    margin-bottom: 30px;
+}
+
+.comment-replied {
+    background-color: #b4b4f2;
+    height: 300px;
+}
+
+
+.comment-replied .usercon {
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+
+}
+
+.comment-replied .usercon .badge {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.comment-replied .usercon .badge span {
+    display: block;
+}
+
+.comment-replied .usercon .comment {
+    background-color: #a8a8a8;
+    width: 1000px;
+    padding: 20px;
+}
+
+/* End item page */
+
+/*Start profile page*/
+
+.profile {
+    margin-top: 30px;
+    border: 2px solid #a8a8a8;
+}
+
+.profile .user {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.profile .user .userinfo {
+    background-color: #ececec;
+}
+
+.profile .user .userinfo .info {
+    padding: 20px;
+    color: #7f7fff;
+
+}
+
+.profile .user .userinfo .info:nth-child(even) {
+    background-color: #d4d4d4;
+    color: #7f7fff;
+
+}
+
+.profile hr {
+    height: 5px;
+    background-color: #b266b2;
+}
+
+
+.profile .userItems h1 {
+    margin: 30px;
+    text-align: center;
+    color: #7f7fff;
+    font-size: 80px;
+}
+
+.profile .userItems .item {
+    position: relative;
+    text-align: center;
+}
+
+.profile .userItems .item .price {
+    display: block;
+    background-color: #a8a8a8;
+    color: white;
+    position: absolute;
+    left: 40px;
+}
+
+/*End profile page*/
+/*Start search page*/
+
+.search {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.search .searchbar {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.search .searchbar input[type='text'] {
+    margin-bottom: 20px;
+    height: 60px;
+    padding: 10px;
+}
+
+.search .searchbar input[type='submit'] {
+
+    float: right;
+
+}
+
+.search .searchbar .result{
+    position: absolute;
+    background-color: #bcbcbc;
+    padding: 15px;
+    width: 60%;
+    top: 60px;
+    display:none;
+}
+
+
+
+/*End search page*/
